@@ -395,25 +395,24 @@ button {
 .clients-list {
   display: flex;
 }
-.clients-icon {
-  display: flex;
+.custom-link {
+  display: block;
   height: 88px;
   padding: 15px 31px;
   border-radius: 4px;
   border: 1px solid #8e8f99;
-  cursor: pointer;
 }
 .custom-icon {
   fill: currentColor;
 }
 
-.clients-icon:hover,
-.clients-icon:focus {
+.custom-link:hover,
+.custom-link:focus {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
 }
 
-.clients-icon:hover .custom-icon {
+.custom-link:hover .custom-icon {
   fill: var(--accent-color);
 }
 

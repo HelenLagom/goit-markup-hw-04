@@ -147,10 +147,24 @@ button {
 
 /* Hero */
 .hero {
+  max-width: 1440px;
   padding: 188px 0;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
   background-color: var(--title-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero.img/office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 1);
 }
+
 .hero-title {
   width: 496px;
   margin: 0 auto 48px;
@@ -207,11 +221,19 @@ button {
 .advantages-item {
   max-width: 264px;
 }
+.advantages-icons {
+  display: flex;
+  padding: 24px 100px;
+  background-color: var(--footer-filter-color);
+  border-radius: 4px;
+  height: 112px;
+}
 .features-title {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 
@@ -267,15 +289,38 @@ button {
   margin-right: 24px;
 }
 .team-item {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   background-color: var(--background-color);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-name {
   padding: 32px 16px;
   text-align: center;
+}
+/* Socials */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  fill: var(--footer-filter-color);
+  background-color: var(--second-accent-color);
+  border-radius: 50%;
+}
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--footer-filter-color);
 }
 
 /* Works */
@@ -309,6 +354,8 @@ button {
 .filter:focus {
   color: var(--background-color);
   background: var(--accent-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 .projects-list {
   display: flex;
@@ -326,20 +373,106 @@ button {
   align-content: flex-start;
   flex-basis: calc((100% - 48px) / 3);
 }
+.project:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
 
 .description {
   padding: 32px 16px;
 }
+
+/* Clients */
+.clients {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.clients-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-list {
+  display: flex;
+}
+.clients-icon {
+  display: flex;
+  height: 88px;
+  padding: 15px 31px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  cursor: pointer;
+}
+.custom-icon {
+  fill: currentColor;
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.clients-icon:hover .custom-icon {
+  fill: var(--accent-color);
+}
+
+.custom:not(:last-child) {
+  margin-right: 24px;
+}
+.custom {
+  background-color: var(--background-color);
+}
 /* Footer */
+.ftr-logo {
+  padding: 0;
+}
 .footer-text {
-  width: 264px;
   margin-top: 16px;
+  width: 264px;
   color: var(--footer-filter-color);
 }
 
 .footer {
+  display: flex;
   padding: 100px 0;
   background: var(--title-color);
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.ftr-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 120px;
+}
+
+.ftr-media {
+  font-weight: 500;
+  color: var(--footer-filter-color);
+}
+
+.ftr-socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+.ftr-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  fill: var(--footer-filter-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.ftr-link:hover,
+.ftr-link:focus {
+  background-color: #31d0aa;
+  fill: var(--footer-filter-color);
 }
 
 .studio {

@@ -424,10 +424,11 @@ button {
 .custom-link:hover,
 .custom-link:focus {
   border: 1px solid var(--accent-color);
-  fill: var(--accent-color);
+  /* fill: var(--accent-color); */
 }
 
-.custom-link:hover .custom-icon {
+.custom-link:hover .custom-icon,
+.custom-link:focus .custom-icon {
   fill: var(--accent-color);
 }
 
